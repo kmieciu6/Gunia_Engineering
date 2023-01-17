@@ -2,9 +2,9 @@ import './scss/main.scss';
 
 function App() {
     return (
-        <>
-            działczy
-        </>
+        <div className="App">
+            <h1>Hi world</h1>
+        </div>
     );
 }
 
