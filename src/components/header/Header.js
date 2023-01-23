@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import Nav from "./Nav";
 import logo from "../../assets/logo.svg";
 import ScrollTop from "./ScrollTop";
+import Cookies from "../Cookies";
 
 const Header = () => {
     return (
@@ -14,7 +15,8 @@ const Header = () => {
                 </Link>
                 <Nav/>
             </div>
-            <ScrollTop />
+            <ScrollTop/>
+            <Cookies/>
         </section>
     );
 };
