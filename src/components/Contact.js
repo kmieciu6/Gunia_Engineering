@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 function Contact() {
     let errEmail = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
 
-    const [state, handleSubmit] = useForm("xgebvawj");
+    const [state, handleSubmit] = useForm("mgebvgzr");
     if (state.succeeded) {
         return (
             <>
