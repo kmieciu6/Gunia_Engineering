@@ -86,7 +86,7 @@ const Burger = ({open, setOpen}) => {
             </StyledBurger>
             <StyledMenu open={open} onClose={handleIsOpen}>
                 <nav onClick={closeSideBar}>
-                    <Link to="/">Main page</Link>
+                    <Link to="/">Home</Link>
                     <Link to="/services">Services</Link>
                     <Link to="/portfolio">Portfolio</Link>
                     <Link to="/about">About</Link>

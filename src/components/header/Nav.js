@@ -9,7 +9,7 @@ const Nav = () => {
             <Burger open={open} setOpen={setOpen}/>
             <div className='nav_menu'>
                 <Link to='/'>
-                    <button className='nav_btn'>Main page</button>
+                    <button className='nav_btn'>Home</button>
                 </Link>
                 <Link to='/services'>
                     <button className='nav_btn'>Services</button>

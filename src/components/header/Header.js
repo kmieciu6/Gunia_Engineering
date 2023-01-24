@@ -10,8 +10,8 @@ const Header = () => {
         <section id='header'>
             <div className='container'>
                 <Link to="/" className='title'>
-                    <h3>Gunia</h3>
                     <img className='main_logo' src={logo} alt="logo"/>
+                    <h3>TYTUŁ</h3>
                 </Link>
                 <Nav/>
             </div>
