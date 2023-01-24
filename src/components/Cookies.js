@@ -6,18 +6,18 @@ const Cookies = () => {
         <>
             <CookieConsent
                 location="bottom"
-                buttonText="Rozumiem i akceptuje"
+                buttonText="I understand and accept"
                 cookieName="myAwesomeCookieName2"
                 style={{background: "#2B373B", opacity: .9}}
                 buttonStyle={{background: "lightblue", color: "black", fontSize: "17px", padding: '0.6rem 1rem'}}
                 expires={150}
             >
-                Strona korzysta z plików cookie w celu poprawienia jej dostępności, personalizacji czy aby zbierać dane,
-                dotyczące ruchu na stronie. Każdy może sam decydować o tym czy dopuszcza pliki cookies, ustawiając
-                odpowiednio swoją przeglądarkę.
+                The website uses cookies to improve its accessibility, personalization or to collect data,
+                regarding website traffic. Everyone can decide for themselves whether they allow cookies by setting
+                your browser accordingly.
                 <br/>
-                Więcej informacji znajdziesz w{" "}
-                <Link to="/"
+                More information can be found in{" "}
+                <Link to="/privacy_policy"
                       className='terms_cookies'
                       onClick={() => {
                           window.scroll({
@@ -26,7 +26,7 @@ const Cookies = () => {
                               behavior: "smooth",
                           });
                       }}>
-                    Polityce Prywatności i Regulaminie
+                    Privacy Policy and Regulations
                 </Link>
                 .
             </CookieConsent>
