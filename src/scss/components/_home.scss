@@ -8,15 +8,56 @@
     display: flex;
     justify-content: center;
     padding: 5rem 0;
-    background: $main-color;
 
-    p {
+    div {
       width: 90%;
-      text-align: justify;
 
       @include desktop {
         width: 50%;
       }
     }
+
+    &:first-of-type {
+      background: $main-color;
+    }
+
+    &:last-of-type {
+      padding: 0;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 2rem 0;
+
+        p {
+          margin-top: 2rem;
+        }
+
+
+        @include desktop {
+          flex-direction: row;
+          margin: 0;
+
+          p {
+            margin-left: 2rem;
+            margin-top: 0;
+          }
+        }
+
+      }
+    }
+
+    img {
+      width: 60%;
+      @include desktop {
+        width: 80%;
+      }
+    }
+  }
+
+  p {
+    text-align: justify;
   }
 }
