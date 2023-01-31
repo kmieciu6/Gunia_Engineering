@@ -11,10 +11,10 @@ const StyledMenu = styled.nav`
       display: flex;
       position: absolute;
       right: 0;
-      top: 79.6px;
+      top: 55px;
       flex-direction: column;
       box-shadow: 0 3px 6px -2px #A5A5A5;
-      width: 50%;
+      width: 55%;
       z-index: 3;
       background: white;
 
@@ -45,7 +45,7 @@ const StyledBurger = styled.button`
   @media (max-width: 1023px) {
     border: none;
     background: white;
-    
+
     span {
       display: block;
       width: 20px;
@@ -66,7 +66,7 @@ const StyledBurger = styled.button`
       }
     }
 
-    margin: 30px;
+    margin: 20px 0;
   }
 `
 

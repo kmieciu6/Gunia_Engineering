@@ -1,12 +1,9 @@
-import React, {useState} from "react";
-import Burger from "./Burger";
+import React from "react";
 import {Link} from "react-router-dom";
 
 const Nav = () => {
-    const [open, setOpen] = useState(false);
     return (
         <nav className='header__nav'>
-            <Burger open={open} setOpen={setOpen}/>
             <div className='nav_menu'>
                 <Link to='/'>
                     <button className='nav_btn'>Home</button>

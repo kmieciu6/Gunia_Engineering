@@ -1,5 +1,7 @@
 .header__nav {
-  width: 50%;
+  @include desktop {
+    width: 50%;
+  }
 
   .nav_menu {
     display: none;
@@ -15,6 +17,7 @@
         border: 2px solid white;
         padding: 1rem;
         background: white;
+        font-size: 1.2rem;
 
         &:hover {
           color: black;
