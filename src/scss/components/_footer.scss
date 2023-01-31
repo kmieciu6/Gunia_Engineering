@@ -1,21 +1,46 @@
 #footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background: silver;
-  padding: 2rem 0;
+  padding-top: 1rem;
+
+  a {
+    text-decoration: none;
+    color: $accent-color;
+    transition: 1s;
+
+    &:hover {
+      color: black;
+    }
+  }
+
 
   .phone_mail {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 
     a {
       display: flex;
-      margin: 1rem 0;
-      text-decoration: none;
-      color: black;
+      flex-direction: column;
+      margin: 2rem 0;
+      align-items: center;
+      justify-content: center;
 
       p {
-        padding-left: 1rem;
+        padding-top: 1rem;
       }
+    }
+
+    .icon {
+      font-size: 2rem;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 3rem;
+
+    p {
+      margin: 1rem 0;
     }
   }
 }
