@@ -12,12 +12,13 @@
         font-family: $font-main;
         color: grey;
         text-decoration: none;
-        border: none;
+        border: 2px solid white;
+        padding: 1rem;
         background: white;
 
         &:hover {
           color: black;
-          border-color: orange;
+          border-bottom: 2px solid $main-color;
         }
       }
     }

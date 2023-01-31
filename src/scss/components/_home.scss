@@ -1,0 +1,17 @@
+#home {
+
+  .opening {
+    width: 100%;
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+    background: $main-color;
+
+    p {
+      width: 50%;
+    }
+  }
+}
