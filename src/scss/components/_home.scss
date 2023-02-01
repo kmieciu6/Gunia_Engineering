@@ -7,7 +7,11 @@
   .text {
     display: flex;
     justify-content: center;
-    padding: 5rem 0;
+    padding: 2rem 0;
+
+    @include desktop {
+      padding: 4rem 0;
+    }
 
     div {
       width: 90%;

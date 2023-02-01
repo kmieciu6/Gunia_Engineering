@@ -12,16 +12,17 @@
 
       .nav_btn {
         font-family: $font-main;
-        color: grey;
+        color: silver;
         text-decoration: none;
-        border: 2px solid white;
+        border: none;
+        border-bottom: 2px solid $header-color;
         padding: 1rem;
-        background: white;
+        background: $header-color;
         font-size: 1.2rem;
         transition: 1s;
 
         &:hover {
-          color: black;
+          color: white;
           border-bottom: 2px solid $main-color;
         }
       }

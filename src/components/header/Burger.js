@@ -11,12 +11,12 @@ const StyledMenu = styled.nav`
       display: flex;
       position: absolute;
       right: 0;
-      top: 55px;
+      top: 83px;
       flex-direction: column;
       box-shadow: 0 3px 6px -2px #A5A5A5;
       width: 55%;
       z-index: 3;
-      background: white;
+      background: #00263d;
 
       a {
         display: ${({open}) => (open ? "flex" : "none")};
@@ -24,7 +24,7 @@ const StyledMenu = styled.nav`
         font-size: 0.6875rem;
         font-weight: 700;
         letter-spacing: 0.1875rem;
-        color: black;
+        color: silver;
         text-decoration: none;
         text-transform: uppercase;
         padding: 25px;
@@ -44,17 +44,17 @@ const StyledBurger = styled.button`
   }
   @media (max-width: 1023px) {
     border: none;
-    background: white;
+    background: #00263d;
 
     span {
       display: block;
-      width: 20px;
-      height: 2px;
-      background: blue;
-      margin-bottom: 3px;
+      width: 25px;
+      height: 2.5px;
+      background: white;
+      margin-bottom: 4px;
 
       &:first-child {
-        transform: ${({open}) => (open ? "rotate(45deg) translate(2px, 5px)" : "rotate(0) translate(0)")};
+        transform: ${({open}) => (open ? "rotate(45deg) translate(4px, 7px)" : "rotate(0) translate(0)")};
       }
 
       &:nth-child(2) {

@@ -3,7 +3,7 @@ import {ErrorMessage, Field, Formik} from 'formik';
 import {useForm} from '@formspree/react';
 import Header from "./header/Header";
 import Footer from "./Footer";
-import thanks from '../assets/logo.svg'
+import thanks from '../assets/logo.png'
 import {Link} from "react-router-dom";
 
 function Contact() {
