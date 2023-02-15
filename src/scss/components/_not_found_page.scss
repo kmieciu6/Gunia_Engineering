@@ -1,0 +1,16 @@
+#not_found_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 45vh;
+  text-align: justify;
+
+  h2 {
+    margin: 2rem 2rem 3rem;
+
+    @include desktop {
+      margin: 2rem 2rem 5rem;
+    }
+  }
+}
