@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {Link as Scroll} from 'react-scroll';
 
 const StyledMenu = styled.nav`
   @media (min-width: 1024px) {
@@ -77,6 +78,7 @@ const Burger = ({open, setOpen}) => {
     const closeSideBar = () => {
         setOpen(false)
     }
+  
     return (
         <>
             <StyledBurger open={open} onClick={() => setOpen(!open)}>
@@ -88,9 +90,7 @@ const Burger = ({open, setOpen}) => {
                 <nav onClick={closeSideBar}>
                     <Link to="/">Home</Link>
                     <Link to="/services">Services</Link>
-                    <Link to="/portfolio">Portfolio</Link>
-                    <Link to="/about">About</Link>
-                    <Link to='/contact'>Contact us</Link>
+                    <Scroll to={"footer"} onClick={closeSideBar} smooth duration={500}>Contact</Scroll>
                 </nav>
             </StyledMenu>
         </>

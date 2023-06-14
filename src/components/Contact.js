@@ -1,8 +1,8 @@
 import React from 'react';
 import {ErrorMessage, Field, Formik} from 'formik';
 import {useForm} from '@formspree/react';
-import Header from "./header/Header";
-import Footer from "./Footer";
+// import Header from "./header/Header";
+// import Footer from "./Footer";
 import thanks from '../assets/logo.png'
 import {Link} from "react-router-dom";
 
@@ -13,7 +13,7 @@ function Contact() {
     if (state.succeeded) {
         return (
             <>
-                <Header/>
+                {/* <Header/> */}
                 <section id='contact'>
                     <div className='thanks'>
                         <h1>Thank you for contacting us</h1>
@@ -32,13 +32,13 @@ function Contact() {
                         </Link>
                     </div>
                 </section>
-                <Footer/>
+                {/* <Footer/> */}
             </>
         )
     }
     return (
         <>
-            <Header/>
+            {/* <Header/> */}
             <section id='contact'>
                 <h1>Contact</h1>
                 <Formik
@@ -160,7 +160,7 @@ function Contact() {
                     }
                 </Formik>
             </section>
-            <Footer/>
+            {/* <Footer/> */}
         </>
     );
 }

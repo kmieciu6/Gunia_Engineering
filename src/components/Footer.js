@@ -1,9 +1,11 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
+import Contact from "./Contact";
 
 const Footer = () => {
     return (
         <section id='footer'>
+            <Contact/>
             <div>
                 <div className='phone_mail'>
                     <a href="mailto:engineering.finite@gmail.com">

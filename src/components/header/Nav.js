@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {Link as Scroll} from 'react-scroll';
 
 const Nav = () => {
     return (
@@ -11,15 +12,9 @@ const Nav = () => {
                 <Link to='/services'>
                     <button className='nav_btn'>Services</button>
                 </Link>
-                <Link to='/portfolio'>
-                    <button className='nav_btn'>Portfolio</button>
-                </Link>
-                <Link to='/about'>
-                    <button className='nav_btn'>About</button>
-                </Link>
-                <Link to='/contact'>
+                <Scroll to={"footer"} smooth duration={500}>
                     <button className='nav_btn'>Contact</button>
-                </Link>
+                </Scroll>
             </div>
         </nav>
     )

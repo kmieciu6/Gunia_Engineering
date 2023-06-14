@@ -1,13 +1,304 @@
-#home {
+%arrows {
+  @include transition(all, 0.25s, ease-in);
+  @include opacity(0.4);
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  background: none;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer;
 
-  .opening {
-    width: 100%;
+  &:focus,
+  &:hover {
+      @include opacity(1);
   }
 
-  .text {
+  &.control-arrow {
+      &:before {
+          margin: 0 20px;
+          display: inline-block;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid transparent;
+          content: '';
+      }
+  }
+
+  &.control-disabled {
+      @include opacity(0);
+      cursor: inherit;
+      display: none;
+  }
+
+  &.control-prev {
+      left: 0;
+      &:before {
+          border-right: 8px solid #fff;
+      }
+  }
+
+  &.control-next {
+      right: 0;
+      &:before {
+          border-left: 8px solid #fff;
+      }
+  }
+}
+
+.carousel-root {
+  outline: none;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 700px;
+
+  // only applying box sizing inside the plugin so it won't break any style
+  * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+
+  img {
+      width: 100%;
+      display: inline-block;
+      pointer-events: none;
+  }
+
+  .carousel {
+      position: relative;
+  }
+
+  .control-arrow {
+      @extend %arrows;
+      outline: 0;
+      border: 0;
+      background: none;
+      top: 50%;
+      margin-top: -13px;
+      font-size: 18px;
+  }
+
+  .thumbs-wrapper {
+      margin: 20px;
+      overflow: hidden;
+  }
+
+  .thumbs {
+      @include transition(all, 0.15s, ease-in);
+      // activate hardware accelerated animations using translate property
+      @include enhanceAnimations();
+      position: relative;
+      list-style: none;
+      white-space: nowrap;
+  }
+
+  .thumb {
+      @include transition(border, 0.15s, ease-in);
+      display: inline-block;
+      margin-right: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 3px solid #fff;
+      padding: 2px;
+
+      &:focus {
+          border: 3px solid #ccc;
+          outline: none;
+      }
+
+      &.selected,
+      &:hover {
+          border: 3px solid $main-color;
+      }
+
+      img {
+          vertical-align: top;
+      }
+  }
+
+  &.carousel-slider {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+
+      // adjusting the arrows for the slider
+      .control-arrow {
+          @extend %arrows;
+          top: 0;
+          color: #fff;
+          font-size: 26px;
+          bottom: 0;
+          margin-top: 0;
+          padding: 5px;
+
+          &:hover {
+              background: rgba(#000, 0.2);
+          }
+      }
+  }
+
+  .slider-wrapper {
+      overflow: hidden;
+      margin: auto;
+      width: 100%;
+      @include transition(height, 0.15s, ease-in);
+
+      &.axis-horizontal {
+          .slider {
+              -ms-box-orient: horizontal;
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -moz-flex;
+              display: -webkit-flex;
+              display: flex;
+
+              .slide {
+                  flex-direction: column;
+                  flex-flow: column;
+              }
+          }
+      }
+
+      &.axis-vertical {
+          -ms-box-orient: horizontal;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -moz-flex;
+          display: -webkit-flex;
+          display: flex;
+
+          .slider {
+              -webkit-flex-direction: column;
+              flex-direction: column;
+          }
+      }
+  }
+
+  .slider {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      list-style: none;
+      width: 100%;
+
+      &.animated {
+          @include transition(all, 0.35s, ease-in-out);
+          // activate hardware accelerated animations using translate property
+          // @include enhanceAnimations();
+      }
+  }
+
+  .slide {
+      min-width: 100%;
+      margin: 0;
+      position: relative;
+      text-align: center;
+      height: 100%;
+      // padding-bottom: 32px;
+
+      img {
+          width: 100%;
+          vertical-align: top;
+          border: 0;
+          height: 100%;
+          object-fit: contain;
+      }
+
+      iframe {
+          display: inline-block;
+          width: calc(100% - 80px);
+          margin: 0 40px 40px;
+          border: 0;
+      }
+
+      .legend {
+          @include transition(all, 0.5s, ease-in-out);
+          position: absolute;
+          display: flex;
+          bottom: 0;
+          right: 10%;
+          margin-left: -45%;
+          width: 30%;
+          height: 100%;
+          background: rgba(0, 0, 0, .8);
+          color: #fff;
+          // padding: 300px 0;
+          font-size: 30px;
+          align-items: center;
+          justify-content: center;
+          // opacity: 0.7;
+          @include transition(background, 0.35s, ease-in-out);
+
+          @include desktop {
+            background: rgba(0, 0, 0, .6);
+          }
+      }
+  }
+
+  .control-dots {
+      position: absolute;
+      bottom: 0;
+      margin: 10px 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      z-index: 1;
+
+      @include desktop {
+          bottom: 0;
+      }
+
+      .dot {
+          @include transition(opacity, 0.25s, ease-in);
+          @include opacity(0.3);
+          box-shadow: 1px 1px 2px rgba(#000, 0.9);
+          background: #fff;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
+          cursor: pointer;
+          display: inline-block;
+          margin: 0 8px;
+
+          &.selected,
+          &:hover {
+              @include opacity(1);
+          }
+      }
+  }
+
+  .carousel-status {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      font-size: 10px;
+      text-shadow: 1px 1px 1px rgba(#000, 0.9);
+      color: #fff;
+  }
+
+  &:hover {
+      .slide .legend {
+        background: rgba(0, 0, 0, .8);
+      }
+  }
+}
+
+
+#home {
+
+  .text-welcome {
     display: flex;
     justify-content: center;
     padding: 2rem 0;
+    background: $main-color;
+
 
     @include desktop {
       padding: 4rem 0;
@@ -20,43 +311,42 @@
         width: 50%;
       }
     }
+  }
 
-    &:first-of-type {
-      background: $main-color;
+  .text-section {
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    // border: 1px solid red;
+    
+    @include desktop {
+      margin: 2rem;
     }
+    
+    
+    .text-line {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 1200px;
 
-    &:last-of-type {
-      padding: 0;
-
+      @include desktop {
+        justify-content: space-around;
+        flex-direction: row;
+      }
+      
       div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        margin: 2rem 0;
-
-        p {
-          margin-top: 2rem;
-        }
-
+        width: 80%;
 
         @include desktop {
-          flex-direction: row;
-          margin: 0;
-
-          p {
-            margin-left: 2rem;
-            margin-top: 0;
-          }
+          width: 30%;
         }
-
-      }
-    }
-
-    img {
-      width: 60%;
-      @include desktop {
-        width: 80%;
+        
       }
     }
   }
