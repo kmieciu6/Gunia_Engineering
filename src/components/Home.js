@@ -19,43 +19,42 @@ const Home = () => {
             <Carousel showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true}>
                 <div>
                     <img src={photo1} alt="carousel 1" />
-                    <p className="legend">Empowering Innovation through Engineering Expertise</p>
+                    <h1 className="legend">Empowering Innovation through Engineering Expertise</h1>
                 </div>
                 <div>
                     <img src={photo2} alt="carousel 2" />
-                    <p className="legend">Mechanical Design and Analysis</p>
+                    <h1 className="legend">Mechanical Design and Analysis</h1>
                 </div>
                 <div>
                     <img src={photo3} alt="carousel" />
-                    <p className="legend">Finite Element Analysis (FEA)</p>
+                    <h1 className="legend">Finite Element Analysis (FEA)</h1>
                 </div>
                 <div>
                     <img src={photo4} alt="carousel 4" />
-                    <p className="legend">Failure Analysis and Root Cause Investigation</p>
+                    <h1 className="legend">Failure Analysis and Root Cause Investigation</h1>
                 </div>
                 <div>
                     <img src={photo5} alt="carousel 5" />
-                    <p className="legend">Product Development and Prototyping</p>
+                    <h1 className="legend">Product Development and Prototyping</h1>
                 </div>
                 <div>
                     <img src={photo6} alt="carousel 6" />
-                    <p className="legend">Materials Selection and Testing</p>
+                    <h1 className="legend">Materials Selection and Testing</h1>
                 </div>
                 <div>
                     <img src={photo7} alt="carousel 7" />
-                    <p className="legend">Slew bearing calculation with our inhouse methodology.</p>
+                    <h1 className="legend">Slew bearing calculation with our inhouse methodology.</h1>
                 </div>
             </Carousel>
             <section id='home'>
                 <div className='text-welcome'>
                     <div>
-                        <p>
-                        Welcome to Finite Engineering, your trusted partner in mechanical consultancy. 
-                        We offer a comprehensive range of services aimed at optimizing your mechanical systems, 
-                        enhancing performance, and driving innovation. With our team of experienced engineers and 
-                        cutting-edge tools, we provide tailored solutions to meet your specific needs. 
-                        Here are some of the services we offer:
-                        </p>
+                        <h3>
+                            Welcome to Finite Engineering, your trusted partner in mechanical consultancy. 
+                            We optimize mechanical systems, enhance performance, and drive innovation. 
+                            With experienced engineers and cutting-edge tools, we provide tailored solutions to 
+                            meet your needs.
+                        </h3>
                     </div>
                 </div>
                 {/* <div className='text-section'> */}
@@ -64,14 +63,13 @@ const Home = () => {
                             <div>
                                 <FontAwesomeIcon icon={faThumbtack} className='icons'/>
                                 <h2>
-                                Mechanical Design and Analysis
+                                    Mechanical Design and Analysis
                                 </h2>
                                 <p>
-                                Our team excels in designing and analyzing mechanical systems to ensure optimal 
-                                performance and efficiency. Whether it's product design, machinery development, 
-                                or component optimization, we employ advanced simulation and modeling techniques 
-                                to deliver reliable and innovative solutions. Additionally we can perform 3rd part 
-                                verification required by law and help you to register your design.
+                                    We excel in designing and analyzing mechanical systems for optimal performance. 
+                                    Our advanced simulation techniques deliver reliable and innovative solutions for 
+                                    product design, machinery development, and component optimization. We also offer 
+                                    third-party verification and design registration assistance.
                                 </p>
                             </div>
                             <div>
@@ -80,11 +78,9 @@ const Home = () => {
                                     Finite Element Analysis (FEA)
                                 </h2>
                                 <p>
-                                    Our expertise in FEA enables us to accurately assess structural integrity, 
-                                    thermal behavior, and fluid dynamics of your mechanical systems. We perform 
-                                    detailed simulations to identify potential weaknesses, predict performance 
-                                    under various conditions, and recommend design modifications to enhance reliability 
-                                    and safety.
+                                    Our FEA expertise accurately assesses structural integrity, thermal behavior, 
+                                    and fluid dynamics. Through detailed simulations, we identify weaknesses, 
+                                    predict performance, and recommend design modifications for enhanced reliability and safety.
                                 </p>
                             </div>
                             <div>
@@ -93,10 +89,9 @@ const Home = () => {
                                     Failure Analysis and Root Cause Investigation
                                 </h2>
                                 <p>
-                                    When faced with mechanical failures, our consultancy provides comprehensive 
-                                    failure analysis and root cause investigation services. We utilize advanced 
-                                    techniques and investigative methodologies to identify the underlying causes, 
-                                    enabling you to implement effective corrective measures and prevent future failures.
+                                    Our consultancy offers comprehensive failure analysis and root cause investigation services. 
+                                    Using advanced techniques, we identify underlying causes to implement effective corrective 
+                                    measures and prevent future failures.
                                 </p>
                             </div>
                         </div>
@@ -107,10 +102,9 @@ const Home = () => {
                                     Product Development and Prototyping: 
                                 </h2>
                                 <p>
-                                    Our consultancy offers end-to-end support in product development, from conceptualization 
-                                    to prototyping. We leverage our engineering expertise and industry knowledge to guide you 
-                                    through the entire process, ensuring that your product meets functional requirements, 
-                                    quality standards, and time-to-market goals.
+                                    We offer comprehensive product development support, from concept to prototyping. With our engineering 
+                                    expertise and industry knowledge, we ensure your product meets functional requirements, quality standards, 
+                                    and time-to-market goals.
                                 </p>
                             </div>
                             <div>
@@ -119,10 +113,8 @@ const Home = () => {
                                     Materials Selection and Testing
                                 </h2>
                                 <p>
-                                    We assist clients in selecting appropriate materials for their mechanical systems based on 
-                                    performance requirements, environmental conditions, and cost considerations. Our team 
-                                    conducts rigorous material testing, including mechanical properties evaluation, corrosion 
-                                    resistance analysis, and durability assessments to ensure optimal material selection.
+                                    We assist clients in selecting suitable materials for mechanical systems based on performance, 
+                                    environment, and cost.
                                 </p>
                             </div>
                             <div>
@@ -131,19 +123,16 @@ const Home = () => {
                                     Slew bearing calculation with our inhouse methodology. 
                                 </h2>
                                 <p>
-                                    Our approach takes into account the specific operational loads, such as radial, axial, 
-                                    and moment loads. We analyze load distribution and stress concentrations to ensure optimal 
-                                    load carrying capacity and longevity of the slew bearing. We car prepare FEA model of slew 
-                                    bearing and include it in the simulations of entire structure, to find potential soft spots 
-                                    which can affect bearing life. Our unique method is based on recent literature and the recent 
-                                    PhD of our leading engineer and it was confirmed by tests.
+                                    We utilize advanced FEA analysis to optimize the load capacity and durability of slew bearings. 
+                                    By integrating the bearing model into structure simulations, we identify areas for improved performance. 
+                                    Our approach is supported by recent literature and the expertise of our leading engineer.
                                 </p>
                             </div>
                         </div>
                         <p>
-                            At Finite Engineering, we are committed to delivering exceptional mechanical consultancy services 
-                            tailored to your unique requirements. Contact us today to discuss how we can optimize your mechanical 
-                            systems and propel your business forward.
+                            At Finite Engineering, we are committed to delivering exceptional mechanical consultancy services tailored to 
+                            your unique requirements. Contact us today to discuss how we can optimize your mechanical systems and 
+                            propel your business forward.
                         </p>
                     </div>
                 {/* </div> */}

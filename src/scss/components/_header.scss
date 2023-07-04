@@ -8,15 +8,15 @@
     align-items: center;
     margin: 0 auto;
 
-    img {
-      width: 150px;
+    .main_logo {
+      width: 100px;
       transition: 2s;
 
       @include desktop {
-        width: 200px;
+        width: 180px;
 
         &:hover {
-          width: 250px;
+          width: 200px;
         }
       }
     }

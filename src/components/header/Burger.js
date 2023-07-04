@@ -12,7 +12,7 @@ const StyledMenu = styled.nav`
       display: flex;
       position: absolute;
       right: 0;
-      top: 83px;
+      top: 61px;
       flex-direction: column;
       box-shadow: 0 3px 6px -2px #A5A5A5;
       width: 55%;
@@ -28,7 +28,7 @@ const StyledMenu = styled.nav`
         color: silver;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 25px;
+        padding: 20px;
         justify-content: center;
 
         &:active {

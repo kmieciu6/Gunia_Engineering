@@ -51,8 +51,6 @@
 
 .carousel {
   position: relative;
-  width: 100%;
-  max-height: 700px;
 
   // only applying box sizing inside the plugin so it won't break any style
   * {
@@ -199,6 +197,8 @@
       position: relative;
       text-align: center;
       height: 100%;
+      display: flex; /* Dodaj ten styl */
+  justify-content: center; /* Dodaj ten styl */
       // padding-bottom: 32px;
 
       img {
@@ -228,14 +228,13 @@
           background: rgba(0, 0, 0, .8);
           color: #fff;
           // padding: 300px 0;
-          font-size: 30px;
           align-items: center;
           justify-content: center;
-          // opacity: 0.7;
+        //   opacity: 0.7;
           @include transition(background, 0.35s, ease-in-out);
 
           @include desktop {
-            background: rgba(0, 0, 0, .6);
+            background: rgba(0, 0, 0, .5);
           }
       }
   }
@@ -312,9 +311,6 @@
       }
     }
   }
-
-  .text-section {
-  }
   
   .text {
     display: flex;
@@ -322,7 +318,7 @@
     justify-content: center;
     align-items: center;
     
-    // border: 1px solid red;
+    border: 1px solid red;
     
     @include desktop {
       margin: 2rem;
