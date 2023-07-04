@@ -12,6 +12,9 @@ const Nav = () => {
                 <Link to='/services'>
                     <button className='nav_btn'>Services</button>
                 </Link>
+                <Link to='/about'>
+                    <button className='nav_btn'>About Us</button>
+                </Link>
                 <Scroll to={"footer"} smooth duration={500}>
                     <button className='nav_btn'>Contact</button>
                 </Scroll>

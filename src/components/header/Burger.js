@@ -90,6 +90,7 @@ const Burger = ({open, setOpen}) => {
                 <nav onClick={closeSideBar}>
                     <Link to="/">Home</Link>
                     <Link to="/services">Services</Link>
+                    <Link to="/about">About Us</Link>
                     <Scroll to={"footer"} onClick={closeSideBar} smooth duration={500}>Contact</Scroll>
                 </nav>
             </StyledMenu>
