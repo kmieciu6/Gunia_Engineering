@@ -15,7 +15,7 @@ h1 {
   }
 
   @include mobile {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -23,11 +23,11 @@ h2 {
   font-size: 2rem;
 
   @include tablet {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   @include mobile {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -35,11 +35,11 @@ h3 {
   font-size: 1.5rem;
 
   @include tablet {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   @include mobile {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -47,10 +47,10 @@ p {
   font-size: 1.2rem;
 
   @include tablet {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
   }
 
   @include mobile {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

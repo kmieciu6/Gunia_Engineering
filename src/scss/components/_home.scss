@@ -223,7 +223,7 @@
           bottom: 0;
           right: 10%;
           margin-left: -45%;
-          width: 30%;
+          width: 40%;
           height: 100%;
           background: rgba(0, 0, 0, .8);
           color: #fff;
@@ -235,6 +235,7 @@
 
           @include desktop {
             background: rgba(0, 0, 0, .5);
+            width: 30%;
           }
       }
   }
@@ -295,16 +296,16 @@
   .text-welcome {
     display: flex;
     justify-content: center;
+    text-align: justify;
     padding: 2rem 0;
     background: $main-color;
-
 
     @include desktop {
       padding: 4rem 0;
     }
 
     div {
-      width: 90%;
+      width: 80%;
 
       @include desktop {
         width: 50%;
@@ -317,13 +318,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    border: 1px solid red;
+    padding: 2rem 0;
+    // background: $home-text-color;
     
     @include desktop {
-      margin: 2rem;
+      padding: 2rem;
     }
-    
     
     .text-line {
       display: flex;
@@ -334,17 +334,54 @@
       @include desktop {
         justify-content: space-around;
         flex-direction: row;
+        align-items: start;
+      }
+
+      &:first-child {
+        @include desktop {
+            margin-bottom: 3rem;
+        }
       }
       
-      div {
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 80%;
+        margin: 1rem 0;
 
         @include desktop {
           width: 30%;
         }
-        
+
+        .icons {
+            height: 2rem;
+            padding: 1rem;
+            color: $main-color;
+
+            @include desktop {
+                height: 3rem;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
       }
     }
+
+    .last-text {
+        color: $accent-color;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        width: 80%;
+
+        @include desktop {
+            margin-top: 4rem;
+            width: 50%;
+          }
+      }
   }
 
   p {
