@@ -6,6 +6,7 @@
     .title {
         background: $main-color;
         width: 100%;
+        margin-bottom: 5rem;
     }
     
     h2 {
@@ -27,20 +28,22 @@
     }
 
     h3 {
-        margin-top: 3rem;
+        margin-bottom: 2rem;
 
         @include desktop {
-            margin-top: 4rem;
-            margin-bottom: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 4rem;
         }
     }
 
     img {
         width: 80%;
         border-radius: 50px 15px;
+        margin-top: 2rem;
 
         @include desktop {
             width: 40%;
+            margin: 0;
         }
     }
 

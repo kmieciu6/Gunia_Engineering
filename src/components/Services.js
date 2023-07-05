@@ -17,8 +17,8 @@ const Services = () => {
                     <h2>Services</h2>
                 </div>
                 <div className="container">
+                    <h3>1.	Mechanical Design and Analysis</h3>
                     <div className='container_text'>
-                        <h3>1.	Mechanical Design and Analysis</h3>
                         <div className="text">
                             <p>
                                 Our team excels in designing and analyzing mechanical systems to ensure optimal 
@@ -38,8 +38,8 @@ const Services = () => {
                         </div>
                         <span/>
                     </div>
+                    <h3>2.	Finite Element Analysis (FEA)</h3>
                     <div className='container_text'>
-                        <h3>2.	Finite Element Analysis (FEA)</h3>
                         <div className="text">
                             <p>
                                 Our expertise in FEA enables us to accurately assess structural integrity, thermal 
@@ -63,8 +63,8 @@ const Services = () => {
                         </div>
                         <span/>
                     </div>
+                    <h3>3.	Failure Analysis and Root Cause Investigation</h3>
                     <div className='container_text'>
-                        <h3>3.	Failure Analysis and Root Cause Investigation</h3>
                         <div className="text">
                             <p>
                                 When faced with mechanical failures, our consultancy provides comprehensive failure 
@@ -77,8 +77,8 @@ const Services = () => {
                         </div>
                         <span/>
                     </div>
+                    <h3>4.	Product Development and Prototyping</h3>
                     <div className='container_text'>
-                        <h3>4.	Product Development and Prototyping</h3>
                         <div className="text">
                             <p>
                                 Our consultancy offers end-to-end support in product development, from conceptualization 
@@ -96,8 +96,8 @@ const Services = () => {
                         </div>
                         <span/>
                     </div>
+                    <h3>5.	Materials Selection and Testing</h3>
                     <div className='container_text'>
-                        <h3>5.	Materials Selection and Testing</h3>
                         <div className="text">
                             <p>
                                 We assist clients in selecting appropriate materials for their mechanical systems based 
@@ -116,8 +116,8 @@ const Services = () => {
                         </div>
                         <span/>
                     </div>
+                    <h3>6.	Slew bearing calculation with our inhouse methodology</h3>
                     <div className='container_text'>
-                        <h3>6.	Slew bearing calculation with our inhouse methodology</h3>
                         <div className="text">
                             <p>
                                 Our approach takes into account the specific operational loads, such as radial, axial, 
