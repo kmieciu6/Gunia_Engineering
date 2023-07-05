@@ -388,4 +388,26 @@
   p {
     text-align: justify;
   }
+
+  .find_out {
+    padding: 0.8rem 1.3rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 2px solid $main-color;
+    background: $main-color;
+    transition: 1s;
+    font-size: 1.1rem;
+
+    @include desktop {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+
+        &:hover {
+            background: $accent-color;
+            color: white;
+            border: 2px solid $accent-color;
+        }
+    }
+  }
 }

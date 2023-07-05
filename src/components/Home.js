@@ -22,6 +22,7 @@ import icon4 from '../assets/icon4.svg';
 import icon5 from '../assets/icon5.svg';
 import icon6 from '../assets/icon6.svg';
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const isSmallScreen = window.innerWidth <= 768; // Ustaw odpowiednią szerokość ekranu, aby określić, kiedy przełączać zdjęcia
@@ -154,6 +155,16 @@ const Home = () => {
                         your unique requirements. Contact us today to discuss how we can optimize your mechanical systems and 
                         propel your business forward.
                     </p>
+                    <Link to='/services'
+                    onClick={() => {
+                        window.scroll({
+                            top: 0,
+                            left: 0,
+                            behavior: "smooth",
+                        });
+                    }}>
+                        <button className='find_out'>Find out more</button>
+                    </Link>
                 </div>
             </section>
             <Footer/>
