@@ -13,7 +13,7 @@ const StyledMenu = styled.nav`
       display: flex;
       position: absolute;
       right: 0;
-      top: 78px;
+      top: 76px;
       flex-direction: column;
       box-shadow: 0 3px 6px -2px #A5A5A5;
       width: 55%;
