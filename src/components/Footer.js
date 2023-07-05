@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import Contact from "./Contact";
 
 const Footer = () => {
@@ -12,10 +12,10 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faEnvelope} className='icon'/>
                         <p>engineering.finite@gmail.com</p>
                     </a>
-                    <a href="tel:+61">
+                    {/* <a href="tel:+61">
                         <FontAwesomeIcon icon={faPhone} className='icon'/>
                         <p>+61 xxx xx xx</p>
-                    </a>
+                    </a> */}
                 </div>
                 <div className='copyright'>
                     <p>
