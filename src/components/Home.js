@@ -2,12 +2,19 @@ import React from 'react'
 import Header from "./header/Header";
 import Footer from "./Footer";
 import photo1 from '../assets/photo1.jpg';
+import phone1 from '../assets/phone1.jpg';
 import photo2 from '../assets/photo2.jpg';
+import phone2 from '../assets/phone2.jpg';
 import photo3 from '../assets/photo3.jpg';
+import phone3 from '../assets/phone3.jpg';
 import photo4 from '../assets/photo4.jpg';
+import phone4 from '../assets/phone4.jpg';
 import photo5 from '../assets/photo5.jpg';
+import phone5 from '../assets/phone5.jpg';
 import photo6 from '../assets/photo6.jpg';
+import phone6 from '../assets/phone6.jpg';
 import photo7 from '../assets/photo7.jpg';
+import phone7 from '../assets/phone7.jpg';
 import icon1 from '../assets/icon1.svg';
 import icon2 from '../assets/icon2.svg';
 import icon3 from '../assets/icon3.svg';
@@ -17,36 +24,46 @@ import icon6 from '../assets/icon6.svg';
 import { Carousel } from 'react-responsive-carousel';
 
 const Home = () => {
+    const isSmallScreen = window.innerWidth <= 768; // Ustaw odpowiednią szerokość ekranu, aby określić, kiedy przełączać zdjęcia
+
+    const img1 = isSmallScreen ? phone1 : photo1;
+    const img2 = isSmallScreen ? phone2 : photo2;
+    const img3 = isSmallScreen ? phone3 : photo3;
+    const img4 = isSmallScreen ? phone4 : photo4;
+    const img5 = isSmallScreen ? phone5 : photo5;
+    const img6 = isSmallScreen ? phone6 : photo6;
+    const img7 = isSmallScreen ? phone7 : photo7;
+
     return (
         <>
             <Header/>
             <Carousel showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true}>
                 <div>
-                    <img src={photo1} alt="carousel 1" />
+                    <img src={img1} alt="carousel 1" />
                     <h1 className="legend">Empowering Innovation through Engineering Expertise</h1>
                 </div>
                 <div>
-                    <img src={photo2} alt="carousel 2" />
+                    <img src={img2} alt="carousel 2" />
                     <h1 className="legend">Mechanical Design and Analysis</h1>
                 </div>
                 <div>
-                    <img src={photo3} alt="carousel" />
+                    <img src={img3} alt="carousel" />
                     <h1 className="legend">Finite Element Analysis (FEA)</h1>
                 </div>
                 <div>
-                    <img src={photo4} alt="carousel 4" />
+                    <img src={img4} alt="carousel 4" />
                     <h1 className="legend">Failure Analysis and Root Cause Investigation</h1>
                 </div>
                 <div>
-                    <img src={photo5} alt="carousel 5" />
+                    <img src={img5} alt="carousel 5" />
                     <h1 className="legend">Product Development and Prototyping</h1>
                 </div>
                 <div>
-                    <img src={photo6} alt="carousel 6" />
+                    <img src={img6} alt="carousel 6" />
                     <h1 className="legend">Materials Selection and Testing</h1>
                 </div>
                 <div>
-                    <img src={photo7} alt="carousel 7" />
+                    <img src={img7} alt="carousel 7" />
                     <h1 className="legend">Slew bearing calculation with our inhouse methodology.</h1>
                 </div>
             </Carousel>
