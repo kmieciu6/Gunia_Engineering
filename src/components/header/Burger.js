@@ -6,13 +6,14 @@ import {Link as Scroll} from 'react-scroll';
 const StyledMenu = styled.nav`
   @media (min-width: 1024px) {
     display: none;
+
   }
   @media (max-width: 1023px) {
     nav {
       display: flex;
       position: absolute;
       right: 0;
-      top: 61px;
+      top: 78px;
       flex-direction: column;
       box-shadow: 0 3px 6px -2px #A5A5A5;
       width: 55%;
@@ -67,7 +68,7 @@ const StyledBurger = styled.button`
       }
     }
 
-    margin: 20px 0;
+    margin: 1.8rem 0;
   }
 `
 
