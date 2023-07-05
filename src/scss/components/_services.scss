@@ -2,16 +2,74 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .title {
+        background: $main-color;
+        width: 100%;
+    }
     
     h2 {
-        margin: 2rem;
-    }
+        margin: 3rem;
 
-    .cantainer {
+        @include desktop {
+            margin: 4rem;
+        }
+    }
+    
+    .container {
+        max-width: 1200px;
         width: 80%;
 
         @include desktop {
+            margin: 1rem;
             width: 60%;
+        }
+    }
+
+    h3 {
+        @include desktop {
+            margin-bottom: 1rem;
+        }
+    }
+
+    img {
+        width: 80%;
+        border-radius: 50px 15px;
+
+        @include desktop {
+            width: 40%;
+        }
+    }
+
+    p {
+        text-align: justify;
+
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+    .container_text {
+
+        .text {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        &:nth-of-type(2) .text, &:nth-of-type(4) .text, &:nth-of-type(6) .text{
+
+            img {
+                border-radius: 15px 50px;
+            }
+
+            @include desktop {
+                flex-direction: row-reverse;
+            }
         }
     }
 }

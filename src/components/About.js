@@ -7,7 +7,9 @@ const About = () => {
         <>
             <Header/>
             <section id='about'>
-                <h2>About</h2>
+                <div className="title">
+                    <h2>About</h2>
+                </div>
                 <div>
                     <p>
                         Welcome to Finite Engineering, a leading mechanical consultancy company dedicated to providing 

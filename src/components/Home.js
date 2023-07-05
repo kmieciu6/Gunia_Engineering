@@ -150,11 +150,11 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                    <p className='last-text'>
+                    <h3 className='last-text'>
                         At Finite Engineering, we are committed to delivering exceptional mechanical consultancy services tailored to 
                         your unique requirements. Contact us today to discuss how we can optimize your mechanical systems and 
                         propel your business forward.
-                    </p>
+                    </h3>
                     <Link to='/services'
                     onClick={() => {
                         window.scroll({

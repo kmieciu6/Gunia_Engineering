@@ -21,6 +21,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  font-weight: 800;
   text-align: center;
 
   @include tablet {
@@ -28,24 +29,27 @@ h2 {
   }
 
   @include mobile {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
 
 h3 {
   font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.1rem;
 
   @include tablet {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   @include mobile {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
 p {
   font-size: 1.2rem;
+  line-height: 1.6rem;
 
   @include tablet {
     font-size: 1.1rem;
