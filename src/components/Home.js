@@ -1,16 +1,20 @@
 import React from 'react'
 import Header from "./header/Header";
 import Footer from "./Footer";
-import photo1 from '../assets/photo1.jpg'
-import photo2 from '../assets/photo2.jpg'
-import photo3 from '../assets/photo3.jpg'
-import photo4 from '../assets/photo4.jpg'
-import photo5 from '../assets/photo5.jpg'
-import photo6 from '../assets/photo6.jpg'
-import photo7 from '../assets/photo7.jpg'
+import photo1 from '../assets/photo1.jpg';
+import photo2 from '../assets/photo2.jpg';
+import photo3 from '../assets/photo3.jpg';
+import photo4 from '../assets/photo4.jpg';
+import photo5 from '../assets/photo5.jpg';
+import photo6 from '../assets/photo6.jpg';
+import photo7 from '../assets/photo7.jpg';
+import icon1 from '../assets/icon1.svg';
+import icon2 from '../assets/icon2.svg';
+import icon3 from '../assets/icon3.svg';
+import icon4 from '../assets/icon4.svg';
+import icon5 from '../assets/icon5.svg';
+import icon6 from '../assets/icon6.svg';
 import { Carousel } from 'react-responsive-carousel';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faThumbtack, faPenFancy, faPencil, faCalculator, faMarker, faScissors} from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
     return (
@@ -60,7 +64,7 @@ const Home = () => {
                 <div className='text'>
                     <div className='text-line'>
                         <div className='text-container'>
-                            <FontAwesomeIcon icon={faThumbtack} className='icons'/>
+                            <img className='icons' src={icon1} alt='icon'/>
                             <h2>
                                 Mechanical Design and Analysis
                             </h2>
@@ -72,7 +76,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className='text-container'>
-                            <FontAwesomeIcon icon={faPenFancy} className='icons'/>
+                            <img className='icons' src={icon2} alt='icon'/>
                             <h2>
                                 Finite Element Analysis (FEA)
                             </h2>
@@ -83,7 +87,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className='text-container'>
-                            <FontAwesomeIcon icon={faPencil} className='icons'/>
+                            <img className='icons' src={icon3} alt='icon'/>
                             <h2>
                                 Failure Analysis and Root Cause Investigation
                             </h2>
@@ -96,7 +100,7 @@ const Home = () => {
                     </div>
                     <div className='text-line'> 
                         <div className='text-container'>
-                            <FontAwesomeIcon icon={faCalculator} className='icons'/>
+                            <img className='icons' src={icon4} alt='icon'/>
                             <h2>
                                 Product Development and Prototyping: 
                             </h2>
@@ -107,7 +111,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className='text-container'>
-                            <FontAwesomeIcon icon={faMarker} className='icons'/>
+                            <img className='icons' src={icon5} alt='icon'/>
                             <h2>
                                 Materials Selection and Testing
                             </h2>
@@ -117,7 +121,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className='text-container'>
-                            <FontAwesomeIcon icon={faScissors} className='icons'/>
+                            <img className='icons' src={icon6} alt='icon'/>
                             <h2>
                                 Slew bearing calculation with our inhouse methodology. 
                             </h2>
