@@ -36,6 +36,7 @@ const Services = () => {
                             </p>
                             <img src={photo1} alt='photos' className="photo"/>
                         </div>
+                        <span/>
                     </div>
                     <div className='container_text'>
                         <h3>2.	Finite Element Analysis (FEA)</h3>
@@ -60,6 +61,7 @@ const Services = () => {
                             </p>
                             <img src={photo2} alt='photos' className="photo"/>
                         </div>
+                        <span/>
                     </div>
                     <div className='container_text'>
                         <h3>3.	Failure Analysis and Root Cause Investigation</h3>
@@ -73,6 +75,7 @@ const Services = () => {
                             </p>
                             <img src={photo3} alt='photos' className="photo"/>
                         </div>
+                        <span/>
                     </div>
                     <div className='container_text'>
                         <h3>4.	Product Development and Prototyping</h3>
@@ -91,6 +94,7 @@ const Services = () => {
                             </p>
                             <img src={photo4} alt='photos' className="photo"/>
                         </div>
+                        <span/>
                     </div>
                     <div className='container_text'>
                         <h3>5.	Materials Selection and Testing</h3>
@@ -110,6 +114,7 @@ const Services = () => {
                             </p>
                             <img src={photo5} alt='photos' className="photo"/>
                         </div>
+                        <span/>
                     </div>
                     <div className='container_text'>
                         <h3>6.	Slew bearing calculation with our inhouse methodology</h3>
@@ -128,6 +133,7 @@ const Services = () => {
                             </p>
                             <img src={photo6} alt='photos' className="photo"/>
                         </div>
+                        <span/>
                     </div>
                 </div>
             </section>

@@ -27,7 +27,10 @@
     }
 
     h3 {
+        margin-top: 3rem;
+
         @include desktop {
+            margin-top: 4rem;
             margin-bottom: 1rem;
         }
     }
@@ -44,16 +47,20 @@
     p {
         text-align: justify;
 
-
         @include desktop {
             width: 50%;
         }
     }
     .container_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8rem;
 
         .text {
             display: flex;
             flex-direction: column;
+            align-items: center;
 
             @include desktop {
                 flex-direction: row;
@@ -69,6 +76,19 @@
 
             @include desktop {
                 flex-direction: row-reverse;
+            }
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            border-bottom: 0.3rem solid $main-color;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding-bottom: 5rem;
+
+            @include desktop {
+                width: 80%;
             }
         }
     }
