@@ -35,7 +35,7 @@ const About = () => {
                 <div className="title">
                     <h2>About</h2>
                 </div>
-                <div className="text">
+                <div className="text first">
                     <p>
                         Welcome to Finite Engineering, a leading mechanical consultancy company dedicated to providing 
                         innovative solutions and exceptional expertise in the field of mechanical engineering including 
