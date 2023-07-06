@@ -93,7 +93,7 @@ const Home = () => {
                 </div>
             </Carousel>
             <section id='home'>
-                <div className='text-welcome boxy fade-in' ref={(el) => elementsRef.current.push(el)}>
+                <div className='text-welcome'>
                     <div>
                         <h3>
                             Welcome to Finite Engineering, your trusted partner in mechanical consultancy. 
@@ -104,7 +104,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='text'>
-                    <div className='text-line'>
+                    <div className='text-line box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         <div className='text-container'>
                             <img className='icons' src={icon1} alt='icon'/>
                             <h2>
