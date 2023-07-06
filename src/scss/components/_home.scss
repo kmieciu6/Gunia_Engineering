@@ -299,12 +299,12 @@
   .text-welcome {
     display: flex;
     justify-content: center;
-    text-align: justify;
     padding: 2rem 0;
     background: $main-color;
 
     @include desktop {
       padding: 4rem 0;
+      text-align: justify;
     }
 
     div {
@@ -340,6 +340,7 @@
       }
 
       &:first-child {
+
         @include desktop {
             margin-bottom: 3rem;
         }
@@ -386,7 +387,11 @@
   }
 
   p, h3 {
-    text-align: justify;
+    text-align: left;
+    
+    @include desktop {
+        text-align: justify;
+    }
   }
 
   .find_out {
