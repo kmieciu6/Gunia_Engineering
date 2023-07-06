@@ -47,13 +47,15 @@
         }
     }
 
-    p {
+    ul {
+        margin-top: 1rem;
+        list-style-type: disc;
 
-        @include desktop {
-            width: 50%;
-            text-align: justify;
+        li {
+            margin-left: 1rem;
         }
     }
+
     .container_text {
         display: flex;
         flex-direction: column;
@@ -68,6 +70,14 @@
             @include desktop {
                 flex-direction: row;
                 justify-content: space-between;
+            }
+
+            div {
+
+                @include desktop {
+                    width: 50%;
+                    text-align: justify;
+                }
             }
         }
 

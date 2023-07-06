@@ -29,9 +29,11 @@
         p {
             margin: 2rem;
             width: 80%;
+            text-align: center;
 
             @include desktop {
                 width: 60%;
+                text-align: justify;
             }
         }
 
