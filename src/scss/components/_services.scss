@@ -48,10 +48,10 @@
     }
 
     p {
-        text-align: justify;
 
         @include desktop {
             width: 50%;
+            text-align: justify;
         }
     }
     .container_text {
