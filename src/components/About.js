@@ -35,7 +35,7 @@ const About = () => {
                 <div className="title">
                     <h2>About</h2>
                 </div>
-                <div className="text box fade-in" ref={(el) => elementsRef.current.push(el)}>
+                <div className="text">
                     <p>
                         Welcome to Finite Engineering, a leading mechanical consultancy company dedicated to providing 
                         innovative solutions and exceptional expertise in the field of mechanical engineering including 
@@ -44,6 +44,8 @@ const About = () => {
                         your specific needs and deliver superior results.
                     </p>
                     <img src={photo1} alt='photos' className="photo"/>
+                  </div>
+                  <div className="text box fade-in" ref={(el) => elementsRef.current.push(el)}>
                     <p>
                         At Finite Engineering, we specialize in optimizing mechanical systems, enhancing performance, 
                         and driving innovation across a wide range of industries. With years of experience and a deep 
@@ -51,6 +53,8 @@ const About = () => {
                         challenges and provide effective solutions.
                     </p>
                     <img src={photo2} alt='photos' className="photo"/>
+                  </div>
+                  <div className="text box fade-in" ref={(el) => elementsRef.current.push(el)}>
                     <p>
                         One of our key strengths is our expertise in mechanical design and analysis. Whether it's 
                         conceptualizing new products, optimizing existing systems, or performing detailed simulations, 
