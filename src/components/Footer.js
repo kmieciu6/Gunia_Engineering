@@ -1,10 +1,33 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import Contact from "./Contact";
+import { useEffect, useRef } from 'react';
 
 const Footer = () => {
+
+    const elementsRef = useRef([]);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+  
+        elementsRef.current.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+  
+          if (elementTop < windowHeight) {
+            element.classList.add('visible');
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return (
-        <section id='footer'>
+        <section id='footer' className="box fade-in" ref={(el) => elementsRef.current.push(el)}>
             <Contact/>
             <div>
                 <div className='phone_mail'>

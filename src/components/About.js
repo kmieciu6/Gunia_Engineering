@@ -3,8 +3,31 @@ import Header from "./header/Header";
 import Footer from "./Footer";
 import photo1 from '../assets/7.jpg';
 import photo2 from '../assets/8.jpg';
+import { useEffect, useRef } from 'react';
 
 const About = () => {
+
+    const elementsRef = useRef([]);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+  
+        elementsRef.current.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+  
+          if (elementTop < windowHeight) {
+            element.classList.add('visible');
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return (
         <>
             <Header/>
@@ -12,7 +35,7 @@ const About = () => {
                 <div className="title">
                     <h2>About</h2>
                 </div>
-                <div className="text">
+                <div className="text box fade-in" ref={(el) => elementsRef.current.push(el)}>
                     <p>
                         Welcome to Finite Engineering, a leading mechanical consultancy company dedicated to providing 
                         innovative solutions and exceptional expertise in the field of mechanical engineering including 

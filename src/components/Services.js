@@ -7,8 +7,31 @@ import photo3 from '../assets/3.jpg';
 import photo4 from '../assets/4.jpg';
 import photo5 from '../assets/5.jpg';
 import photo6 from '../assets/6.jpg';
+import { useEffect, useRef } from 'react';
 
 const Services = () => {
+
+    const elementsRef = useRef([]);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+  
+        elementsRef.current.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+  
+          if (elementTop < windowHeight) {
+            element.classList.add('visible');
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return (
         <>
             <Header/>
@@ -39,7 +62,7 @@ const Services = () => {
                         <span/>
                     </div>
                     <h3>2.	Finite Element Analysis (FEA)</h3>
-                    <div className='container_text'>
+                    <div className='container_text box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         <div className="text">
                             <p>
                                 Our expertise in FEA enables us to accurately assess structural integrity, thermal 
@@ -64,7 +87,7 @@ const Services = () => {
                         <span/>
                     </div>
                     <h3>3.	Failure Analysis and Root Cause Investigation</h3>
-                    <div className='container_text'>
+                    <div className='container_text box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         <div className="text">
                             <p>
                                 When faced with mechanical failures, our consultancy provides comprehensive failure 
@@ -78,7 +101,7 @@ const Services = () => {
                         <span/>
                     </div>
                     <h3>4.	Product Development and Prototyping</h3>
-                    <div className='container_text'>
+                    <div className='container_text box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         <div className="text">
                             <p>
                                 Our consultancy offers end-to-end support in product development, from conceptualization 
@@ -97,7 +120,7 @@ const Services = () => {
                         <span/>
                     </div>
                     <h3>5.	Materials Selection and Testing</h3>
-                    <div className='container_text'>
+                    <div className='container_text box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         <div className="text">
                             <p>
                                 We assist clients in selecting appropriate materials for their mechanical systems based 
@@ -117,7 +140,7 @@ const Services = () => {
                         <span/>
                     </div>
                     <h3>6.	Slew bearing calculation with our inhouse methodology</h3>
-                    <div className='container_text'>
+                    <div className='container_text box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         <div className="text">
                             <p>
                                 Our approach takes into account the specific operational loads, such as radial, axial, 

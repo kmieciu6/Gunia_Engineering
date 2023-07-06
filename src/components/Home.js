@@ -23,6 +23,7 @@ import icon5 from '../assets/icon5.svg';
 import icon6 from '../assets/icon6.svg';
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 
 const Home = () => {
     const isSmallScreen = window.innerWidth <= 768; // Ustaw odpowiednią szerokość ekranu, aby określić, kiedy przełączać zdjęcia
@@ -34,6 +35,29 @@ const Home = () => {
     const img5 = isSmallScreen ? phone5 : photo5;
     const img6 = isSmallScreen ? phone6 : photo6;
     const img7 = isSmallScreen ? phone7 : photo7;
+
+    const elementsRef = useRef([]);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+  
+        elementsRef.current.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+  
+          if (elementTop < windowHeight) {
+            element.classList.add('visible');
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+
 
     return (
         <>
@@ -69,7 +93,7 @@ const Home = () => {
                 </div>
             </Carousel>
             <section id='home'>
-                <div className='text-welcome'>
+                <div className='text-welcome boxy fade-in' ref={(el) => elementsRef.current.push(el)}>
                     <div>
                         <h3>
                             Welcome to Finite Engineering, your trusted partner in mechanical consultancy. 
@@ -116,7 +140,7 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='text-line'> 
+                    <div className='text-line box fade-in' ref={(el) => elementsRef.current.push(el)}> 
                         <div className='text-container'>
                             <img className='icons' src={icon4} alt='icon'/>
                             <h2>
@@ -150,12 +174,12 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                    <h3 className='last-text'>
+                    <h3 className='last-text box fade-in' ref={(el) => elementsRef.current.push(el)}>
                         At Finite Engineering, we are committed to delivering exceptional mechanical consultancy services tailored to 
                         your unique requirements. Contact us today to discuss how we can optimize your mechanical systems and 
                         propel your business forward.
                     </h3>
-                    <Link to='/services'
+                    <Link to='/services' className='box fade-in'ref={(el) => elementsRef.current.push(el)}
                     onClick={() => {
                         window.scroll({
                             top: 0,

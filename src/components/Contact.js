@@ -132,10 +132,8 @@ function Contact() {
                                     </Link>
                                     .
                                 </p>
-                                <ErrorMessage name="agree"
-                                                render={msg => <p className="alert alert_agree">{msg}</p>}/>
+                                <ErrorMessage name="agree" render={msg => <p className="alert alert_agree">{msg}</p>}/>
                             </label>
-
                             <button
                                 type="submit"
                                 disabled={state.submitting}

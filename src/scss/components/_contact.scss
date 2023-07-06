@@ -88,16 +88,24 @@
         cursor: pointer;
         font-size: 14px;
       
+        p {
+            margin-left: 1rem;
+        }
+
         .checkbox_agree {
           display: none;
         }
+
+        .checkbox-label:hover .checkbox_agree + .checkmark {
+            border-color: $accent-color;
+          }
       
         .checkmark {
           position: absolute;
-          top: 0;
+          top: 10px;
           left: 0;
-          height: 20px;
-          width: 20px;
+          height: 25px;
+          width: 25px;
           background-color: #fff;
           border: 2px solid #aaa;
           border-radius: 4px;
@@ -107,10 +115,10 @@
             content: "";
             position: absolute;
             display: none;
-            bottom: 2px;
-            left: 4px;
-            width: 6px;
-            height: 12px;
+            bottom: 5px;
+            left: 6px;
+            width: 8px;
+            height: 15px;
             border: solid $main-color;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
@@ -119,6 +127,7 @@
       
         .checkbox_agree:checked + .checkmark {
           border-color: $main-color;
+
         }
       
         .checkbox_agree:checked + .checkmark:after {
