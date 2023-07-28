@@ -16,10 +16,6 @@
         }
     }
 
-    .first {
-        margin: 4rem 0;
-    }
-
     .text {
         display: flex;
         flex-direction: column;
@@ -27,13 +23,14 @@
         max-width: 1200px;
 
         p {
-            margin: 2rem;
+            margin: 4rem;
             width: 80%;
             text-align: center;
 
             @include desktop {
                 width: 60%;
                 text-align: justify;
+                margin: 6rem;
             }
         }
 
